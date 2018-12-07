@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - @Global.Ressources.AppName</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink(Global.Ressources.AppName, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink(Global.Ressources.Home, "Index", "Home")</li>
+                    <li>@Html.ActionLink(Global.Ressources.Academy, "Index", "Academy")</li>
+                    <li>@Html.ActionLink(Global.Ressources.Statistics, "Index", "Statistics")</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="~/fr-FR/">FR</a></li>
+                    <li><a href="~/en-US/">EN</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <a href="@Url.Action("SignIn", "Home")" style="text-decoration: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="300px" height="50px" viewBox="0 0 3278 522" class="SignInButton">
+                        <style type="text/css">
+                            .fil0:hover {
+                                fill: #4B4B4B;
+                            }
+
+                            .fnt0 {
+                                font-size: 260px;
+                                font-family: 'Segoe UI Semibold', 'Segoe UI';
+                                text-decoration: none;
+                            }
+</style>
+                        <rect class="fil0" x="2" y="2" width="3174" height="517" fill="black" />
+
+
+
+                        <rect x="150" y="129" width="122" height="122" fill="#F35325" />
+
+
+
+                        <rect x="284" y="129" width="122" height="122" fill="#81BC06" />
+
+
+
+                        <rect x="150" y="263" width="122" height="122" fill="#05A6F0" />
+
+
+
+                        <rect x="284" y="263" width="122" height="122" fill="#FFBA08" />
+
+
+
+                        <text x="470" y="357" fill="white" class="fnt0">Sign in with Microsoft</text>
+        </svg>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - @Global.Ressources.AppName</p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
