@@ -88,6 +88,33 @@ namespace Global {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à Log Off.
+        /// </summary>
+        public static string Logoff {
+            get {
+                return ResourceManager.GetString("Logoff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Please sign in.
+        /// </summary>
+        public static string PleaseSignIn {
+            get {
+                return ResourceManager.GetString("PleaseSignIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à Sign In.
+        /// </summary>
+        public static string SignIn {
+            get {
+                return ResourceManager.GetString("SignIn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Statistics.
         /// </summary>
         public static string Statistics {

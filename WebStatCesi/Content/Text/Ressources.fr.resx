@@ -126,6 +126,15 @@
   <data name="Home" xml:space="preserve">
     <value>Accueil</value>
   </data>
+  <data name="Logoff" xml:space="preserve">
+    <value>Se deconnecter</value>
+  </data>
+  <data name="PleaseSignIn" xml:space="preserve">
+    <value>Veuillez vous authentifier.</value>
+  </data>
+  <data name="SignIn" xml:space="preserve">
+    <value>Se connecter</value>
+  </data>
   <data name="Statistics" xml:space="preserve">
     <value>Statistiques</value>
   </data>

@@ -1,12 +1,10 @@
 ﻿using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OpenIdConnect;
-using System;
-using System.Threading.Tasks;
+
 using System.Web;
 using System.Web.Mvc;
 
-using WebStatCesi.Models;
 using WebStatCesi.Src;
 
 namespace WebStatCesi.Controllers
@@ -16,6 +14,7 @@ namespace WebStatCesi.Controllers
     {
         public HomeController()
         {
+
         }
 
         public ActionResult Index()

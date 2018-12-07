@@ -2,55 +2,64 @@
 
 <h2>@Global.Ressources.Statistics</h2>
 
+@if (Request.IsAuthenticated)
+{
+    <div class="container-fluid">
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12">
-            <table id="grid"></table>
+        <div class="row">
+            <div class="col-xs-12">
+                <table id="grid"></table>
+            </div>
         </div>
     </div>
-</div>
-<link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.css" rel="stylesheet" type="text/css" />
 
-@Scripts.Render("~/bundles/jquery")
+    <link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        var grid;
-        grid = $('#grid').grid({
-            dataSource: 'Statistics/json',
-            uiLibrary: 'bootstrap4',
-            primaryKey: 'id',
-            inlineEditing: { mode: 'command' },
-            columns: [
-                { field: 'id', width: 44 },
-                { field: 'description', editor: true },
-                { field: 'rate', editor: true },
-                { field: 'idAcademy', editor: true },
-                { field: 'name', title: 'Academy', type: 'dropdown', editField: 'idAcademy', editor: { dataSource: 'Academy/json', valueField: 'id' } },
-            ],
-            pager: { limit: 5 }
-        });
-        grid.on('rowDataChanged', function (e, id, record) {
-            // Clone the record in new object where you can format the data to format that is supported by the backend.
-            var data = $.extend(true, {}, record);
-            // Format the date to format that is supported by the backend.
-            // Post the data to the server
-            $.ajax({ url: '/Statistics/save', data: { record: data }, method: 'POST' })
-                .fail(function () {
-                    alert('Failed to save.');
-                });
-        });
-        grid.on('rowRemoving', function (e, $row, id, record) {
-            if (confirm('Are you sure?')) {
-                $.ajax({ url: '/Statistics/delete', data: { id: id }, method: 'POST' })
-                    .done(function () {
-                        grid.reload();
-                    })
+    @Scripts.Render("~/bundles/jquery")
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var grid;
+            grid = $('#grid').grid({
+                dataSource: 'Statistics/json',
+                uiLibrary: 'bootstrap4',
+                primaryKey: 'id',
+                inlineEditing: { mode: 'command' },
+                columns: [
+                    { field: 'id', width: 44 },
+                    { field: 'description', editor: true },
+                    { field: 'rate', editor: true },
+                    { field: 'idAcademy', editor: true },
+                    { field: 'name', title: 'Academy', type: 'dropdown', editField: 'idAcademy', editor: { dataSource: 'Academy/json', valueField: 'id' } },
+                ],
+                pager: { limit: 5 }
+            });
+            grid.on('rowDataChanged', function (e, id, record) {
+                // Clone the record in new object where you can format the data to format that is supported by the backend.
+                var data = $.extend(true, {}, record);
+                // Format the date to format that is supported by the backend.
+                // Post the data to the server
+                $.ajax({ url: '/Statistics/save', data: { record: data }, method: 'POST' })
                     .fail(function () {
-                        alert('Failed to delete.');
+                        alert('Failed to save.');
                     });
-            }
+            });
+            grid.on('rowRemoving', function (e, $row, id, record) {
+                if (confirm('Are you sure?')) {
+                    $.ajax({ url: '/Statistics/delete', data: { id: id }, method: 'POST' })
+                        .done(function () {
+                            grid.reload();
+                        })
+                        .fail(function () {
+                            alert('Failed to delete.');
+                        });
+                }
+            });
         });
-    });
-</script>
+    </script>
+
+}
+else
+{
+    <p> @Global.Ressources.PleaseSignIn </p>
+}

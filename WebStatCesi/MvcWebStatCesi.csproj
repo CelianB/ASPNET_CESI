@@ -258,7 +258,7 @@
     <Compile Include="Src\AcademieUtility.cs" />
     <Compile Include="Src\AllowJsonGetAttributes.cs" />
     <Compile Include="Src\InternationalizationAttribute.cs" />
-    <Compile Include="Src\Starup.cs" />
+    <Compile Include="Src\Startup.cs" />
     <Compile Include="Src\StatsUtility.cs" />
   </ItemGroup>
   <ItemGroup>

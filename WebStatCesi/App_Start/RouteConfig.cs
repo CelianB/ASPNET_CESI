@@ -9,21 +9,24 @@ namespace WebStatCesi
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-//            routes.MapRoute(
-//    name: "Default",
-//    url: "{controller}/{action}/{id}",
-//    defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-//);
+            //routes.MapRoute("Default",
+            //"{controller}/{action}/{id}",
+            //new
+            //{
+            //    controller = "Home",
+            //    id = "",
+            //    action = "Index",
+            //});
 
             routes.MapRoute("Default",
                         "{language}-{culture}/{controller}/{action}/{id}",
                         new
                         {
+                            culture = "FR",
+                            language = "fr",
                             controller = "Home",
                             action = "Index",
-                            id = "",
-                            language = "fr",
-                            culture = "FR"
+                            id = ""
                         });
         }
     }
