@@ -198,16 +198,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_GlobalResources\locales\en.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>en.resx</DependentUpon>
-    </Compile>
-    <Compile Include="App_GlobalResources\locales\fr.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>fr.resx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -346,14 +336,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_GlobalResources\locales\fr.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>fr.Designer.cs</LastGenOutput>
-    </Content>
-    <Content Include="App_GlobalResources\locales\en.resx">
-      <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>en.Designer.cs</LastGenOutput>
-    </Content>
     <EmbeddedResource Include="Content\Text\Ressources.fr.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Ressources.fr.Designer.cs</LastGenOutput>
