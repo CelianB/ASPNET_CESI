@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormCesi1", "WebFormCesi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcWebStatCesi", "WebStatCesi\MvcWebStatCesi.csproj", "{A552F2E2-D5C6-4597-B7F2-9CA16DECC5F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiWebStatCesi", "ApiWebStatCesi\ApiWebStatCesi.csproj", "{93CEF1FA-F491-450F-BEB0-703CDD0D0C06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{A552F2E2-D5C6-4597-B7F2-9CA16DECC5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A552F2E2-D5C6-4597-B7F2-9CA16DECC5F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A552F2E2-D5C6-4597-B7F2-9CA16DECC5F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93CEF1FA-F491-450F-BEB0-703CDD0D0C06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93CEF1FA-F491-450F-BEB0-703CDD0D0C06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93CEF1FA-F491-450F-BEB0-703CDD0D0C06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93CEF1FA-F491-450F-BEB0-703CDD0D0C06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
